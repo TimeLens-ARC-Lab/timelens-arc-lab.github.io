@@ -302,7 +302,7 @@ body {
   transform: scale(1.2);
 }
 
-.eql-cntrb { 
+.eql-cntrb {
   font-size: 0.875rem;
   color: var(--text-light);
   font-style: italic;
@@ -339,6 +339,52 @@ body {
 
 .content.has-text-justified p {
   margin-bottom: 1.5rem;
+}
+
+/* Avoid awkward spacing in justified lists (Overview columns) */
+.content.has-text-justified ul {
+  margin-left: 1.25rem;
+  padding-left: 0.25rem;
+  text-align: left;
+}
+
+.content.has-text-justified li {
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* Enhanced emphasis styling - subtle gray highlight instead of italic */
+.content em {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  background-color: rgba(100, 116, 139, 0.12) !important;
+  padding: 0.05rem 0.2rem !important;
+  border-radius: 2px !important;
+}
+
+/* Section link styling - unified size with surrounding text */
+.section-link {
+  font-size: inherit;
+  color: var(--primary-color);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  font-weight: inherit;
+  white-space: nowrap;
+  margin-right: 0.35rem;
+  display: inline;
+  vertical-align: baseline;
+}
+
+.section-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Small text utility for inline annotations */
+.text-small {
+  font-size: 0.85em;
+  color: var(--text-secondary);
 }
 
 /* Footer Improvements */
@@ -416,6 +462,12 @@ code {
 
 .copy-bibtex-btn.copied .copy-text::after {
   content: "ied!";
+}
+
+/* Content width utility to match Abstract container feel */
+.content-wide {
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 /* Scroll to Top Button */
@@ -603,54 +655,54 @@ code {
   .hero-body {
     padding: 2rem 1rem;
   }
-  
+
   .publication-header .hero-body {
     padding: 3rem 1rem 2rem;
   }
-  
+
   .publication-title {
     font-size: 2.5rem !important;
     line-height: 1.2 !important;
     margin-bottom: 1.5rem !important;
   }
-  
+
   .publication-authors {
     font-size: 1rem !important;
   }
-  
+
   .button {
     margin: 0.25rem !important;
     font-size: 0.875rem !important;
     padding: 0.75rem 1rem !important;
   }
-  
+
   .more-works-container {
     bottom: 2rem;
     right: 1rem;
     top: auto;
   }
-  
+
   .more-works-btn {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
   }
-  
+
   .more-works-dropdown {
     width: calc(100vw - 2rem);
     right: -1rem;
     bottom: calc(100% + 0.5rem);
     top: auto;
   }
-  
+
   .results-carousel .item {
     margin: 0.5rem;
     padding: 1rem;
   }
-  
+
   .teaser .hero-body {
     padding: 1rem;
   }
-  
+
   .content.has-text-justified {
     font-size: 1rem;
   }
@@ -660,23 +712,23 @@ code {
   .publication-title {
     font-size: 2rem !important;
   }
-  
+
   .hero-body {
     padding: 1.5rem 0.75rem;
   }
-  
+
   .more-works-container {
     position: fixed;
     bottom: 2rem;
     right: 1rem;
     z-index: 1000;
   }
-  
+
   .more-works-btn {
     padding: 0.5rem 0.75rem;
     font-size: 0.75rem;
   }
-  
+
   .more-works-dropdown {
     position: absolute;
     bottom: calc(100% + 0.5rem);
@@ -684,12 +736,12 @@ code {
     width: calc(100vw - 2rem);
     max-width: 90vw;
   }
-  
+
   .link-block {
     display: block;
     margin-bottom: 0.5rem;
   }
-  
+
   .button {
     width: 100%;
     justify-content: center;
@@ -701,7 +753,7 @@ code {
   .hero-body {
     padding: 3rem 2rem;
   }
-  
+
   .publication-header .hero-body {
     padding: 4rem 2rem 3rem;
   }
@@ -737,17 +789,348 @@ a:focus {
   .more-works-container {
     display: none;
   }
-  
+
   .hero, .section {
     animation: none;
   }
-  
+
   .button {
     background: transparent !important;
     color: var(--text-primary) !important;
     box-shadow: none !important;
   }
 }
+
+/* Leaderboard Styles */
+.leaderboard-table {
+  font-size: 0.9rem;
+  border-collapse: collapse;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+.leaderboard-table thead th {
+  background-color: #f8fafc;
+  color: var(--text-primary);
+  font-weight: 700;
+  padding: 0.75rem 0.2rem;
+  border-bottom: 2px solid var(--border-color);
+  text-align: center;
+  font-size: 0.9rem;
+  white-space: normal;
+  word-break: normal;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  vertical-align: middle;
+}
+
+/* Larger font for Model header - only first row */
+.leaderboard-table thead tr:first-child th:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Larger font for benchmark section headers */
+.leaderboard-table thead tr:first-child th[colspan="4"] {
+  font-size: 1.0rem;
+  font-weight: 700;
+}
+
+.leaderboard-table tbody td {
+  padding: 0.7rem 0.35rem;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: #d0dce8 !important;
+  transition: background-color 0.2s ease;
+}
+
+.leaderboard-table tbody tr:hover td.active-sort {
+  background-color: #d0dce8 !important;
+}
+
+.leaderboard-table .sortable {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: background-color 0.2s ease;
+  padding-right: 0.5rem;
+}
+
+.leaderboard-table .sortable:hover:not(.non-sortable) {
+  background-color: #e2e8f0;
+}
+
+.leaderboard-table .sortable.non-sortable {
+  cursor: default;
+  user-select: auto;
+}
+
+.leaderboard-table .sortable.non-sortable:hover {
+  background-color: transparent;
+}
+
+.leaderboard-table .sortable.non-sortable::after {
+  display: none;
+}
+
+.leaderboard-table .sortable::after {
+  content: '↕';
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.4;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.leaderboard-table .sortable.sorted-asc::after {
+  content: '▲';
+  opacity: 1;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+}
+
+.leaderboard-table .sortable.sorted-desc::after {
+  content: '▼';
+  opacity: 1;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+}
+
+/* Prevent wrapping in first columns to avoid line breaks */
+#proprietaryTable thead th:nth-child(1),
+#proprietaryTable thead th:nth-child(2),
+#proprietaryTable tbody td:nth-child(1),
+#proprietaryTable tbody td:nth-child(2),
+#opensourceTable thead th:nth-child(1),
+#opensourceTable thead th:nth-child(2),
+#opensourceTable tbody td:nth-child(1),
+#opensourceTable tbody td:nth-child(2),
+#combinedTable thead th:nth-child(1),
+#combinedTable thead th:nth-child(2),
+#combinedTable thead th:nth-child(3),
+#combinedTable tbody td:nth-child(1),
+#combinedTable tbody td:nth-child(2),
+#combinedTable tbody td:nth-child(3) {
+  white-space: nowrap;
+}
+
+.leaderboard-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.leaderboard-table tbody td:nth-child(2),
+.leaderboard-table thead th:nth-child(2) {
+  text-align: left;
+}
+
+.leaderboard-table tbody td:nth-child(2) {
+  font-weight: 500;
+}
+
+/* Model name link styling */
+.leaderboard-table tbody td:nth-child(2) a {
+  color: var(--primary-color) !important;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.leaderboard-table tbody td:nth-child(2) a:visited {
+  color: var(--primary-color) !important;
+}
+
+
+.leaderboard-table thead th:not(:nth-child(1)):not(:nth-child(2)) {
+  text-align: center;
+}
+
+.leaderboard-table thead th.sortable {
+  text-align: center !important;
+}
+
+.leaderboard-table tbody td:not(:nth-child(1)):not(:nth-child(2)) {
+  text-align: center;
+}
+
+.leaderboard-table .best-score {
+  font-weight: 700;
+}
+
+.leaderboard-table .model-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.leaderboard-table .badge-proprietary {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.leaderboard-table .badge-opensource {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.table-container {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+@media screen and (max-width: 768px) {
+  .leaderboard-table {
+    font-size: 0.75rem;
+  }
+
+  .leaderboard-table thead th,
+  .leaderboard-table tbody td {
+    padding: 0.5rem 0.35rem;
+    font-size: 0.7rem;
+    white-space: normal !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Allow wrapping for first columns on small screens */
+  #proprietaryTable thead th:nth-child(1),
+  #proprietaryTable thead th:nth-child(2),
+  #proprietaryTable tbody td:nth-child(1),
+  #proprietaryTable tbody td:nth-child(2),
+  #opensourceTable thead th:nth-child(1),
+  #opensourceTable thead th:nth-child(2),
+  #opensourceTable tbody td:nth-child(1),
+  #opensourceTable tbody td:nth-child(2),
+  #combinedTable thead th:nth-child(1),
+  #combinedTable thead th:nth-child(2),
+  #combinedTable thead th:nth-child(3),
+  #combinedTable tbody td:nth-child(1),
+  #combinedTable tbody td:nth-child(2),
+  #combinedTable tbody td:nth-child(3) {
+    white-space: normal !important;
+  }
+
+  /* Tighter, smaller sort indicator on mobile */
+  .leaderboard-table .sortable::after {
+    right: 0.08rem;
+    font-size: 0.9rem;
+  }
+  .leaderboard-table .sortable.sorted-asc::after,
+  .leaderboard-table .sortable.sorted-desc::after {
+    font-size: 1.05rem;
+  }
+}
+
+/* Increase container width for leaderboard section */
+#leaderboard .container.is-max-desktop {
+  max-width: 1200px;
+}
+
+/* Active sorted column highlighting */
+.leaderboard-table th.active-sort {
+  background-color: #fef3c7 !important;
+}
+
+/* Ensure all non-sortable headers have consistent background color */
+.leaderboard-table thead th.non-sortable {
+  background-color: #f8fafc !important;
+}
+
+/* Active sort column cells should show yellow background */
+.leaderboard-table tbody td.active-sort {
+  background-color: #fef9e7 !important;
+}
+
+/* Make sure active-sort shows through even without hover, but hover overrides it */
+.leaderboard-table tbody tr td.active-sort {
+  background-color: #fef9e7 !important;
+}
+
+/* Benchmark group separators for clarity */
+.leaderboard-table .benchmark-group {
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
+  border-left: 2px solid #d7dfed;
+  border-right: 2px solid #d7dfed;
+  box-shadow: inset 0 -1px 0 #e2e8f0;
+}
+
+/* Charades-TimeLens boundaries */
+#proprietaryTable thead tr:nth-child(2) th:nth-child(1),
+#opensourceTable thead tr:nth-child(2) th:nth-child(1),
+#combinedTable thead tr:nth-child(2) th:nth-child(1),
+#proprietaryTable tbody td:nth-child(3),
+#opensourceTable tbody td:nth-child(3),
+#combinedTable tbody td:nth-child(4) {
+  border-left: 2px solid #d7dfed;
+}
+
+#proprietaryTable thead tr:nth-child(2) th:nth-child(4),
+#opensourceTable thead tr:nth-child(2) th:nth-child(4),
+#combinedTable thead tr:nth-child(2) th:nth-child(4),
+#proprietaryTable tbody td:nth-child(6),
+#opensourceTable tbody td:nth-child(6),
+#combinedTable tbody td:nth-child(7) {
+  border-right: 2px solid #d7dfed;
+}
+
+/* ActivityNet-TimeLens boundaries */
+#proprietaryTable thead tr:nth-child(2) th:nth-child(5),
+#opensourceTable thead tr:nth-child(2) th:nth-child(5),
+#combinedTable thead tr:nth-child(2) th:nth-child(5),
+#proprietaryTable tbody td:nth-child(7),
+#opensourceTable tbody td:nth-child(7),
+#combinedTable tbody td:nth-child(8) {
+  border-left: 2px solid #d7dfed;
+}
+
+#proprietaryTable thead tr:nth-child(2) th:nth-child(8),
+#opensourceTable thead tr:nth-child(2) th:nth-child(8),
+#combinedTable thead tr:nth-child(2) th:nth-child(8),
+#proprietaryTable tbody td:nth-child(10),
+#opensourceTable tbody td:nth-child(10),
+#combinedTable tbody td:nth-child(11) {
+  border-right: 2px solid #d7dfed;
+}
+
+/* QVHighlights-TimeLens boundaries */
+#proprietaryTable thead tr:nth-child(2) th:nth-child(9),
+#opensourceTable thead tr:nth-child(2) th:nth-child(9),
+#combinedTable thead tr:nth-child(2) th:nth-child(9),
+#proprietaryTable tbody td:nth-child(11),
+#opensourceTable tbody td:nth-child(11),
+#combinedTable tbody td:nth-child(12) {
+  border-left: 2px solid #d7dfed;
+}
+
+#proprietaryTable thead tr:nth-child(2) th:nth-child(12),
+#opensourceTable thead tr:nth-child(2) th:nth-child(12),
+#combinedTable thead tr:nth-child(2) th:nth-child(12),
+#proprietaryTable tbody td:nth-child(14),
+#opensourceTable tbody td:nth-child(14),
+#combinedTable tbody td:nth-child(15) {
+  border-right: 2px solid #d7dfed;
+}
+
+
+
 
 
 
