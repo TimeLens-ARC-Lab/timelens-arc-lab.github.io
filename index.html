@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Primary Meta Tags -->
-    <!-- TODO: Replace with your paper title and author names -->
     <meta name="title"
-        content="TimeLens: Rethinking Video Temporal Grounding with Multimodal LLMs - Jun Zhang, Teng Wang, et al.">
-    <!-- TODO: Write a compelling 150-160 character description of your research -->
-    <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-    <!-- TODO: Add 5-10 relevant keywords for your research area -->
-    <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+        content="TimeLens: Rethinking Video Temporal Grounding with Multimodal LLMs">
+    <meta name="description" content="TimeLens rethinks video temporal grounding (VTG) with MLLMs along two axes: data quality and algorithmic design. We expose critical quality issues in existing VTG benchmarks and propose quality-assured datasets for both training and evaluation. Building upon reliable data, we explore effective timestamp encoding strategies and training recipes, achieving state-of-the-art performance among open-source models.">
+    <meta name="keywords" content="video temporal grounding, multimodal LLM, MLLM, multimodal large language models, large language models, RLVR, reinforcement learning, video understanding, computer vision, deep learning, machine learning">
     <!-- TODO: List all authors -->
     <meta name="author" content="Jun Zhang, Teng Wang, Yuying Ge, Yixiao Ge, Xinhao Li, Ying Shan, Limin Wang">
     <meta name="robots" content="index, follow">
@@ -20,16 +17,11 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <!-- TODO: Replace with your institution or lab name -->
-    <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-    <!-- TODO: Same as paper title above -->
+    <meta property="og:site_name" content="TimeLens ARC Lab">
     <meta property="og:title" content="TimeLens: Rethinking Video Temporal Grounding with Multimodal LLMs">
-    <!-- TODO: Same as description above -->
-    <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-    <!-- TODO: Replace with your actual website URL -->
+    <meta property="og:description" content="TimeLens rethinks video temporal grounding (VTG) with MLLMs along two axes: data quality and algorithmic design. We expose critical quality issues in existing VTG benchmarks and propose quality-assured datasets for both training and evaluation. Building upon reliable data, we explore effective timestamp encoding strategies and training recipes, achieving state-of-the-art performance among open-source models.">
     <meta property="og:url" content="https://timelens-arc-lab.github.io/">
-    <!-- TODO: Create a 1200x630px preview image and update path -->
-    <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+    <meta property="og:image" content="https://timelens-arc-lab.github.io/static/images/teaser_v2-1.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="TimeLens - Research Preview">
@@ -41,25 +33,23 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <!-- TODO: Replace with your lab/institution Twitter handle -->
-    <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-    <!-- TODO: Replace with first author's Twitter handle -->
-    <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-    <!-- TODO: Same as paper title above -->
     <meta name="twitter:title" content="TimeLens: Rethinking Video Temporal Grounding with Multimodal LLMs">
-    <!-- TODO: Same as description above -->
-    <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-    <!-- TODO: Same as social preview image above -->
-    <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-    <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+    <meta name="twitter:description" content="TimeLens rethinks video temporal grounding (VTG) with MLLMs along two axes: data quality and algorithmic design.">
+    <meta name="twitter:image" content="https://timelens-arc-lab.github.io/static/images/teaser_v2-1.png">
+    <meta name="twitter:image:alt" content="TimeLens - Research Preview">
 
     <!-- Academic/Research Specific -->
-    <meta name="citation_title" content="PAPER_TITLE">
-    <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-    <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-    <meta name="citation_publication_date" content="2024">
-    <meta name="citation_conference_title" content="CONFERENCE_NAME">
-    <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+    <meta name="citation_title" content="TimeLens: Rethinking Video Temporal Grounding with Multimodal LLMs">
+    <meta name="citation_author" content="Zhang, Jun">
+    <meta name="citation_author" content="Wang, Teng">
+    <meta name="citation_author" content="Ge, Yuying">
+    <meta name="citation_author" content="Ge, Yixiao">
+    <meta name="citation_author" content="Li, Xinhao">
+    <meta name="citation_author" content="Shan, Ying">
+    <meta name="citation_author" content="Wang, Limin">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_conference_title" content="arXiv">
+    <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2512.14698.pdf">
 
     <!-- Additional SEO -->
     <meta name="theme-color" content="#2563eb">
@@ -116,73 +106,47 @@
     <script defer src="static/js/index.js"></script>
 
     <!-- Structured Data for Academic Papers -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "TimeLens: Rethinking Video Temporal Grounding with Multimodal LLMs",
-    "description": "TODO",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "Jun Zhang",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "TencentARC"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Teng Wang",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "TencentARC"
-        }
-      }
-    ],
-    "datePublished": "2025-12-10",
-    "publisher": {
-      "@type": "Organization",
-      "name": "arXiv"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://timelens-arc-lab.github.io/"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Video Temporal Grounding"
-      },
-      {
-        "@type": "Thing",
-        "name": "Multimodal Large Language Models"
-      }
-    ]
-  }
-  </script>
+        <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "TimeLens: Rethinking Video Temporal Grounding with Multimodal LLMs",
+        "description": "TimeLens rethinks video temporal grounding (VTG) with MLLMs along two axes: data quality and algorithmic design. We expose critical quality issues in existing VTG benchmarks and propose quality-assured datasets for both training and evaluation. Building upon reliable data, we explore effective timestamp encoding strategies and training recipes, achieving state-of-the-art performance among open-source models.",
+        "author": [
+            {"@type": "Person", "name": "Jun Zhang", "affiliation": {"@type": "Organization", "name": "Nanjing University"}},
+            {"@type": "Person", "name": "Teng Wang", "affiliation": {"@type": "Organization", "name": "ARC Lab, Tencent PCG"}},
+            {"@type": "Person", "name": "Yuying Ge", "affiliation": {"@type": "Organization", "name": "ARC Lab, Tencent PCG"}},
+            {"@type": "Person", "name": "Yixiao Ge", "affiliation": {"@type": "Organization", "name": "ARC Lab, Tencent PCG"}},
+            {"@type": "Person", "name": "Xinhao Li", "affiliation": {"@type": "Organization", "name": "Nanjing University"}},
+            {"@type": "Person", "name": "Ying Shan", "affiliation": {"@type": "Organization", "name": "ARC Lab, Tencent PCG"}},
+            {"@type": "Person", "name": "Limin Wang", "affiliation": {"@type": "Organization", "name": "Nanjing University; Shanghai AI Lab"}}
+        ],
+        "datePublished": "2025-12-10",
+        "publisher": {"@type": "Organization", "name": "arXiv"},
+        "url": "https://timelens-arc-lab.github.io/",
+        "image": "https://timelens-arc-lab.github.io/static/images/teaser_v2-1.png",
+        "keywords": ["video temporal grounding", "multimodal LLM", "RLVR", "timestamp encoding", "TimeLens-Bench", "TimeLens-100K", "evaluation suite", "dataset refinement"],
+        "abstract": "TimeLens rethinks video temporal grounding (VTG) with MLLMs along two axes: data quality and algorithmic design. We expose critical quality issues in existing VTG benchmarks and propose quality-assured datasets for both training and evaluation. Building upon reliable data, we explore effective timestamp encoding strategies and training recipes, achieving state-of-the-art performance among open-source models.",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "mainEntity": {"@type": "WebPage", "@id": "https://timelens-arc-lab.github.io/"},
+        "about": [{"@type": "Thing", "name": "Video Temporal Grounding"}, {"@type": "Thing", "name": "Multimodal Large Language Models"}]
+    }
+    </script>
 
     <!-- Website/Organization Structured Data -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+        <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TimeLens ARC Lab",
+        "url": "https://github.com/TimeLens-ARC-Lab",
+        "logo": "https://timelens-arc-lab.github.io/static/images/favicon-32x32.png",
+        "sameAs": [
+            "https://github.com/TimeLens-ARC-Lab"
+        ]
+    }
+    </script>
 </head>
 
 <body>
