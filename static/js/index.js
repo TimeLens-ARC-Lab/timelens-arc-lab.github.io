@@ -234,6 +234,13 @@ const leaderboardData = {
             q_r1_03: 74.2, q_r1_05: 64.6, q_r1_07: 49.3, q_miou: 59.4
         },
         {
+            model: "Qwen3-VL-235B-A22B",
+            url: "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct",
+            c_r1_03: 71.69, c_r1_05: 50.76, c_r1_07: 24.47, c_miou: 47.76,
+            a_r1_03: 69.00, a_r1_05: 57.46, a_r1_07: 39.26, a_miou: 52.15,
+            q_r1_03: 79.62, q_r1_05: 70.15, q_r1_07: 54.45, q_miou: 64.62
+        },
+        {
             model: "TimeLens-8B",
             url: "https://huggingface.co/TencentARC/TimeLens-8B",
             c_r1_03: 76.6, c_r1_05: 63.0, c_r1_07: 35.2, c_miou: 55.2,
