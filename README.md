@@ -1,3 +1,7 @@
+# Usage
+python -m http.server 8080
+git push timelens-new main
+
 # Academic Project Page Template
 
 > **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
@@ -24,8 +28,8 @@ Example project pages built using this template are:
 ## Start using the template
 To start using the template click on `Use this Template`.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+The template uses html for controlling the content and css for controlling the style.
+To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.
 
 **IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
 
@@ -53,7 +57,7 @@ The HTML file has TODO comments showing what to replace:
 
 - Paper title, authors, institution, conference
 - Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
+- Abstract and descriptions
 - Videos, images, and PDFs
 - Related works in the dropdown
 - Meta tags for SEO and social sharing
@@ -69,7 +73,7 @@ Create a 1200x630px social preview image at `static/images/social_preview.png`.
 ## Tips
 
 - Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
+- Use YouTube for large videos (>10MB)
 - Replace the favicon in `static/images/`
 - Works with GitHub Pages
 

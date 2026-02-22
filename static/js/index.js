@@ -220,6 +220,34 @@ const leaderboardData = {
             q_r1_03: 41.5, q_r1_05: 27.8, q_r1_07: 15.2, q_miou: 31.6
         },
         {
+            model: "TRACE",
+            url: "https://github.com/gyxxyg/TRACE",
+            c_r1_03: 37.2, c_r1_05: 21.8, c_r1_07: 9.6, c_miou: 27.1,
+            a_r1_03: 43.4, a_r1_05: 33.9, a_r1_07: 22.0, a_miou: 32.7,
+            q_r1_03: 49.7, q_r1_05: 39.1, q_r1_07: 28.1, q_miou: 39.0
+        },
+        {
+            model: "TRACE-uni",
+            url: "https://github.com/gyxxyg/TRACE",
+            c_r1_03: 38.2, c_r1_05: 22.9, c_r1_07: 10.4, c_miou: 28.1,
+            a_r1_03: 44.3, a_r1_05: 35.1, a_r1_07: 22.6, a_miou: 33.6,
+            q_r1_03: 49.9, q_r1_05: 40.0, q_r1_07: 29.2, q_miou: 39.8
+        },
+        {
+            model: "TimeSuite",
+            url: "https://github.com/OpenGVLab/TimeSuite",
+            c_r1_03: 56.3, c_r1_05: 35.5, c_r1_07: 18.0, c_miou: 38.1,
+            a_r1_03: 27.1, a_r1_05: 17.5, a_r1_07: 8.6, a_miou: 19.8,
+            q_r1_03: 27.1, q_r1_05: 16.9, q_r1_07: 9.9, q_miou: 21.7
+        },
+        {
+            model: "Grounded-VideoLLM",
+            url: "https://github.com/WHB139426/Grounded-Video-LLM",
+            c_r1_03: 43.3, c_r1_05: 28.7, c_r1_07: 13.5, c_miou: 30.0,
+            a_r1_03: 39.2, a_r1_05: 29.6, a_r1_07: 19.5, a_miou: 30.0,
+            q_r1_03: 43.7, q_r1_05: 33.8, q_r1_07: 22.5, q_miou: 33.4
+        },
+        {
             model: "TimeLens-7B",
             url: "https://huggingface.co/TencentARC/TimeLens-7B",
             c_r1_03: 70.5, c_r1_05: 55.6, c_r1_07: 28.4, c_miou: 48.8,
