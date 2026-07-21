@@ -276,6 +276,13 @@ const leaderboardData = {
             q_r1_03: 80.2, q_r1_05: 71.6, q_r1_07: 55.5, q_miou: 65.5
         },
         {
+            model: "TimeLens2-2B",
+            url: "https://huggingface.co/MCG-NJU/TimeLens2-2B",
+            c_r1_03: 74.2, c_r1_05: 60.6, c_r1_07: 33.6, c_miou: 53.4,
+            a_r1_03: 71.1, a_r1_05: 62.0, a_r1_07: 43.2, a_miou: 55.4,
+            q_r1_03: 81.1, q_r1_05: 72.8, q_r1_07: 57.8, q_miou: 67.0
+        },
+        {
             model: "TimeLens2-4B",
             url: "https://huggingface.co/MCG-NJU/TimeLens2-4B",
             c_r1_03: 80.3, c_r1_05: 66.6, c_r1_07: 37.5, c_miou: 57.7,
