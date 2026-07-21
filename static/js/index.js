@@ -274,6 +274,20 @@ const leaderboardData = {
             c_r1_03: 76.6, c_r1_05: 63.0, c_r1_07: 35.2, c_miou: 55.2,
             a_r1_03: 68.9, a_r1_05: 58.4, a_r1_07: 40.6, a_miou: 53.2,
             q_r1_03: 80.2, q_r1_05: 71.6, q_r1_07: 55.5, q_miou: 65.5
+        },
+        {
+            model: "TimeLens2-4B",
+            url: "https://huggingface.co/MCG-NJU/TimeLens2-4B",
+            c_r1_03: 80.3, c_r1_05: 66.6, c_r1_07: 37.5, c_miou: 57.7,
+            a_r1_03: 74.6, a_r1_05: 65.5, a_r1_07: 47.2, a_miou: 59.0,
+            q_r1_03: 83.3, q_r1_05: 75.2, q_r1_07: 60.0, q_miou: 69.3
+        },
+        {
+            model: "TimeLens2-8B",
+            url: "https://huggingface.co/MCG-NJU/TimeLens2-8B",
+            c_r1_03: 80.9, c_r1_05: 68.0, c_r1_07: 38.9, c_miou: 58.6,
+            a_r1_03: 74.0, a_r1_05: 65.6, a_r1_07: 46.6, a_miou: 58.6,
+            q_r1_03: 84.4, q_r1_05: 76.1, q_r1_07: 61.2, q_miou: 70.2
         }
     ]
 };
@@ -519,4 +533,3 @@ function initializeLeaderboard() {
     renderTable('opensource');
     renderTable('combined');
 }
-
